@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Falling Words</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="word" style="left: 20%;">
+      <!-- Inline SVG or <img src="word1.svg"> -->
+      <img src="image/word1.svg" alt="Word 1">
+    </div>
+    <div class="word" style="left: 70%;">
+      <img src="image/word2.svg" alt="Word 2">
+    </div>
+    <div class="word" style="left: 90%;">
+      <img src="word3.svg" alt="Word 3">
+    </div>
+      <div class="word" style="left: 0%;">
+        <img src="word4.svg" alt="Word 4">
+      </div>
+      <div class="word" style="left: 50%;">
+        <img src="word5.svg" alt="Word 5">
+    </div>
+    <div class="word" style="left: 40%;">
+      <img src="word6.svg" alt="Word 6">
+  </div>
+  <script>
+    const gridSize = 50;
+  
+    document.querySelectorAll('.word').forEach(word => {
+      let isDragging = false;
+      let offsetX, offsetY;
+  
+      word.addEventListener('pointerdown', (e) => {
+        isDragging = true;
+        offsetX = e.clientX - word.getBoundingClientRect().left;
+        offsetY = e.clientY - word.getBoundingClientRect().top;
+        word.style.transition = 'none';
+        word.setPointerCapture(e.pointerId);
+      });
+  
+      word.addEventListener('pointermove', (e) => {
+        if (!isDragging) return;
+        word.style.left = `${e.clientX - offsetX}px`;
+        word.style.top = `${e.clientY - offsetY}px`;
+      });
+  
+      word.addEventListener('pointerup', (e) => {
+        isDragging = false;
+        word.releasePointerCapture(e.pointerId);
+  
+        // Snap to grid
+        const rect = word.getBoundingClientRect();
+        const snappedLeft = Math.round(rect.left / gridSize) * gridSize;
+        const snappedTop = Math.round(rect.top / gridSize) * gridSize;
+  
+        word.style.left = `${snappedLeft}px`;
+        word.style.top = `${snappedTop}px`;
+      });
+    });
+  </script>
+  
+  
+</body>
+</html>

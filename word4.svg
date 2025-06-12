@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.92 57.81">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #daf306;
+        font-family: ShootingStarpersonaluse, 'Shooting Star - personal use';
+        font-size: 36px;
+      }
+
+      .cls-2 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-3 {
+        letter-spacing: .02em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <text class="cls-1" transform="translate(.33 37.42)"><tspan x="0" y="0">imag</tspan><tspan class="cls-3" x="78.84" y="0">i</tspan><tspan class="cls-2" x="89.07" y="0">n</tspan><tspan x="109.76" y="0">ation</tspan></text>
+  </g>
+</svg>

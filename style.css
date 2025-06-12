@@ -1,0 +1,67 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-color: rgb(2, 0, 0);
+  }
+  
+  .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  .word {
+    position: absolute;
+  }
+  
+  .word {
+    position: absolute;
+    top: -150px;
+    animation: bounceFall 2s ease-in-out forwards;
+  }
+  
+  .word:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .word:nth-child(3) {
+    animation-delay: 0.8s;
+  }
+  .word:nth-child(4) {
+    animation-delay: 0.5s;
+ }
+ .word:nth-child(5) {
+    animation-delay: 0.10s;
+ }
+ .word {
+    cursor: grab;
+  }
+  .word:active {
+    cursor: grabbing;
+  }
+  
+  img {
+    width: 120px;
+    height: auto;
+    display: block;
+    /* border: none; */
+  }
+  
+  
+  body {
+    background-image: linear-gradient(to right, #050505 1px, transparent 1px),
+                      linear-gradient(to bottom, #090909 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+  
+  
+  @keyframes bounceFall {
+    0%   { top: -150px; }
+    60%  { top: calc(100vh - 120px); }
+    75%  { top: calc(100vh - 180px); }
+    85%  { top: calc(100vh - 140px); }
+    95%  { top: calc(100vh - 160px); }
+    100% { top: calc(100vh - 120px); }
+  }
+  
