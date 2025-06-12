@@ -58,10 +58,11 @@ body, html {
   
   @keyframes bounceFall {
     0%   { top: -150px; }
-    60%  { top: calc(100vh - 120px); }
-    75%  { top: calc(100vh - 180px); }
-    85%  { top: calc(100vh - 140px); }
-    95%  { top: calc(100vh - 160px); }
-    100% { top: calc(100vh - 120px); }
+    60%  { top: calc(100vh - 200px); } /* ← bigger number */
+    75%  { top: calc(100vh - 260px); }
+    85%  { top: calc(100vh - 220px); }
+    95%  { top: calc(100vh - 240px); }
+    100% { top: calc(100vh - 200px); }
   }
+  
   
